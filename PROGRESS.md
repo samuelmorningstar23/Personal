@@ -4,7 +4,7 @@ Update every Sunday during the metrics check. A bad entry counts; a missing entr
 
 ## Week-by-week
 
-| Wk | Dates | Theme | Blog shipped | Hours (B/R/Rv/P) | Burnout score | Notes |
+| Wk | Dates | Theme | Blog shipped | Hours (B/R/Rv/P) | Telemetry score | Notes |
 |----|-------|-------|:---:|---|:---:|---|
 | 1 | Jul 20–26 | Math in anger | ☐ | | | |
 | 2 | Jul 27–Aug 2 | Classical ML from scratch | ☐ | | | |
@@ -24,7 +24,7 @@ Update every Sunday during the metrics check. A bad entry counts; a missing entr
 | 16 | Nov 2–8 | **SHIP grokking-repro** + portfolio | ☐ | | | |
 | 17 | Nov 9–15 | Reserve · arc post · interviews | ☐ | | | |
 
-Hours legend: B = build, R = read/watch, Rv = review/retention, P = publish. Weekly target ≈ 36/18/11/7 of ~72 real.
+Hours legend: B = build, R = read/watch, Rv = review/retention, P = publish. Weekly target ≈ 38/20/10/7 of ~75 real.
 
 ## Milestone gates (closed-book, timed where stated)
 

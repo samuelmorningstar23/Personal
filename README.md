@@ -2,7 +2,7 @@
 
 **Mission:** go from intermediate Python/ML + undergrad math to elite AI engineer/researcher in 17 weeks.
 **Dates:** Monday **July 20 → Sunday November 15, 2026** (16 curriculum weeks + 1 reserve week).
-**The honest hour math:** the schedule holds 78 hrs/week; budget **72 real** after slippage and life-tax. That is **~1,150–1,200 real hours**, not a fantasy 1,400. Every week below is scoped to that number.
+**The honest hour math (hard mode):** 7 days/week — Mon–Sat at 12 hrs, Sunday as a 9-hour deload/film day. ~81 scheduled hrs/week; budget **~75 real** after slippage and life-tax. That is **~1,250–1,300 real hours**, and every week below is scoped to that number.
 
 This plan was built by drafting each month independently, then adversarially attacking the draft for gaps and unrealistic pacing, then rebuilding it with every fix applied. What survives is scoped to reality.
 
@@ -24,19 +24,19 @@ Six public artifacts by November: `tinystack`, `gpt-from-zero`, `smolchat`, `rl-
 
 | File | What it is |
 |---|---|
-| [`roadmap/00-operating-system.md`](roadmap/00-operating-system.md) | The study system: daily template, retention machinery, burnout protocol, publishing cadence. **Read first.** |
+| [`roadmap/00-operating-system.md`](roadmap/00-operating-system.md) | The study system (hard mode): 7-day daily template, retention machinery, readiness telemetry, publishing cadence. **Read first.** |
 | [`roadmap/01-month-1-foundations.md`](roadmap/01-month-1-foundations.md) | Weeks 1–4, day-level detail |
 | [`roadmap/02-month-2-deep-learning.md`](roadmap/02-month-2-deep-learning.md) | Weeks 5–8 |
 | [`roadmap/03-month-3-llm-stack.md`](roadmap/03-month-3-llm-stack.md) | Weeks 9–12 |
 | [`roadmap/04-month-4-frontier.md`](roadmap/04-month-4-frontier.md) | Weeks 13–17 |
 | [`roadmap/05-resource-stack.md`](roadmap/05-resource-stack.md) | Every book/course/paper, tiered: scheduled vs. reference vs. post-program |
-| [`PROGRESS.md`](PROGRESS.md) | The weekly tracker — check boxes, log hours, run the Sunday burnout checklist |
+| [`PROGRESS.md`](PROGRESS.md) | The weekly tracker — check boxes, log hours, run the Sunday telemetry check |
 | [`GLOSSARY.md`](GLOSSARY.md) | Every term and abbreviation in the plan, in plain language — consult whenever anything reads opaque |
 
 ## The ten hard rules
 
-1. **8 hours sleep, fixed window. 45 min exercise, 6 days/week.** Never traded for study hours — they're the treatment, not the reward.
-2. **Hardest work first:** the 08:15–11:15 build block is sacred. Phone in another room. Every day.
+1. **7 hours sleep, 23:30–06:30, fixed window. 45 min training, 7 days/week.** Consistency is the non-negotiable; sleep *duration* answers to telemetry (retention %, block-start latency), not to doctrine — and not to bravado either.
+2. **Hardest work first:** the 07:45–10:45 build block is sacred. Phone in another room. Every day.
 3. **50% of hours go to building.** If weekly reading exceeds 35%, you are procrastinating with input.
 4. **Every formula you read, you implement or derive by hand within 24 hours.**
 5. **Overfit a single batch before every real training run.** If loss won't hit ~0 on 32 examples, your code is broken, not your hyperparameters.

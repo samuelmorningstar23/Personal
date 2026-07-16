@@ -1,7 +1,7 @@
 # Month 3 — The Modern LLM Stack (Weeks 9–12 · Sep 14 – Oct 11)
 
 **Prerequisite state:** `gpt-from-zero` done and understood line-by-line; PyTorch fluency; papers read with notes. This month you stop reimplementing history and start operating the modern stack: pretrain, post-train, evaluate, retrieve, agentify, serve.
-**Budget:** ~288 real hours (72/week): ~38 build / ~20 read / ~14 debugging+writeup slack. If a week runs over, cut reading, never building.
+**Budget:** ~300 real hours (~75/week): ~40 build / ~21 read / ~14 debugging+writeup slack. If a week runs over, cut reading, never building.
 **Compute (honest version):** **cap $200 this month** — the "<$100" fantasy dies on instance idle time, persistent storage, API calls for data generation, and the LLM-judge eval. Rules: **shut the box down before you debug**; pre-download datasets and request gated models in the *prior* week's evenings (better: prefer ungated **Qwen** and skip the approval wait); first use of any platform (RunPod/Lambda/Modal) costs half a day of onboarding — it's budgeted below.
 **The trough warning:** Weeks 9–10 are statistically where motivation craters in a program like this. It's expected, it's temporary, the system carries you (operating system §5).
 
@@ -129,4 +129,4 @@ Mon–Thu new material, Fri–Sun ship. This was the most overstuffed week in th
 - **One resource per topic.** The lists above are already the cut.
 - **Everything gets an eval — with a CI.** No artifact ships without a number attached from here on.
 - **Daily lab notes in the repo** (`notes/`): raw material for Month 4's portfolio.
-- Take Sunday afternoons genuinely off. Week 9's debugging will test you; a fried brain reads loss curves badly.
+- Sunday afternoons are light-input only, hard stop ~17:30 (operating system §2). Week 9's debugging will test you; a fried brain reads loss curves badly — that's a throughput fact, not a comfort rule.

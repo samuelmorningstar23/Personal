@@ -1,244 +1,195 @@
-# The Operating System: How to Run 1,150 Hours in 17 Weeks
+# The Operating System — Hard Mode: ~1,300 Hours in 17 Weeks
 
-The content changes week to week; this system does not. Treat it like infrastructure — you don't renegotiate it daily, you just run it.
+Seven days a week. No off days. This is the athlete's version: every rule that existed for comfort is gone; every rule that remains is here because removing it measurably reduces output. Mamba mentality is not "grind blindly" — it's obsessive deliberate practice, studying the film, and treating your own performance as data. Elite training programs are periodized on purpose: intensity is the weapon, telemetry is the sight. You don't skip the measurement and call it toughness.
 
 **Core design constraints:**
 
-- 12 hours/day is only sustainable if ~4 of those hours are *low-cognitive-load* hours (review, reading, writing, admin). Nobody does 12 hours of deep work. People who claim to are counting badly.
-- **The honest accounting:** the template below schedules ~78 hrs/week. Budget **72 real** — slippage, life admin (~5 hrs/week of errands and appointments exists whether you plan it or not), and debugging overruns are absorbed by buffers, not by sleep. Every month file in this repo is scoped to **~288 real hours**, and each week names its cut line so slippage degrades the plan instead of cascading.
-- Building > reading. Program-wide split: **50% build, 25% read/watch, 15% review/retention, 10% write/publish.** The retention and publishing machinery (§3, §7) lives *inside* those percentages — Anki, lab notebook, Feynman docs, and the blog cost ~12 hrs/week and are already counted.
-- One rest half-day per week is non-negotiable. 6.5 hard days beats 7 sloppy days every week of a 17-week run.
+- **The accounting:** Mon–Sat run the full 12-hour template (72 hrs); Sunday is a 9-hour deload day (below). ~81 scheduled hrs/week → budget **~75 real** after slippage and life admin. Program total: **~1,250–1,300 real hours.** Month files are scoped to ~300 real hours each.
+- Building > reading. Program-wide split: **50% build, 27% read/watch, 14% review/retention, 9% write/publish.** If your weekly log shows reading above 35%, you are procrastinating with input.
+- 12 deep hours/day is only possible because ~4 of them are low-cognitive-load (review, papers, writing). Structure is what lets you sustain what others can't.
 
 ---
 
-## 1. The Daily Template
+## 1. The Daily Template (Mon–Sat)
 
-Six days a week (Mon–Sat). Times are anchors — shift the whole grid to your chronotype, but keep the block structure and order.
+Times are anchors — shift the grid to your chronotype, keep the block structure and order.
 
 | Time | Block | Hours | Mode |
 |---|---|---|---|
-| 07:00–07:45 | Wake, light, food, no screens | — | — |
-| 07:45–08:15 | **Anki + yesterday's lab notebook re-read** | 0.5 | Review |
-| 08:15–11:15 | **Deep Work 1: BUILD** (hardest coding/math of the day) | 3.0 | Build |
-| 11:15–11:45 | Walk outside. No phone. | — | — |
-| 11:45–13:15 | **Deep Work 2: BUILD continuation or problem sets** | 1.5 | Build |
-| 13:15–14:15 | Lunch + full disconnect | — | — |
-| 14:15–16:15 | **Deep Work 3: STUDY** (courses, textbooks, lectures — active, with notes) | 2.0 | Read |
-| 16:15–17:15 | **Exercise** (lift or run, 45 min + shower) | — | — |
-| 17:15–18:45 | **Paper block** (reading + paper notes; see §4) | 1.5 | Read |
+| 06:30–07:15 | Wake, light, food, no screens | — | — |
+| 07:15–07:45 | **Anki + yesterday's lab-notebook re-read** | 0.5 | Review |
+| 07:45–10:45 | **Deep Work 1: BUILD** (hardest problem of the day) | 3.0 | Build |
+| 10:45–11:15 | Walk outside. No phone. | — | — |
+| 11:15–13:00 | **Deep Work 2: BUILD continuation / problem sets** | 1.75 | Build |
+| 13:00–13:45 | Lunch, full disconnect | — | — |
+| 13:45–16:00 | **Deep Work 3: STUDY** (courses, textbooks — active, with notes) | 2.25 | Read |
+| 16:00–17:00 | **Training** (lift or run, 45 min + shower) | — | — |
+| 17:00–18:45 | **Paper block** (reading + paper notes; §4) | 1.75 | Read |
 | 18:45–19:30 | Dinner | — | — |
-| 19:30–21:00 | **Second build block: light implementation, debugging, experiments you can babysit** | 1.5 | Build |
-| 21:00–22:00 | **Closing hour: lab notebook entry, Feynman writing, Anki card creation, plan tomorrow** | 1.0 | Review/Write |
-| 22:00–22:30 | Shutdown ritual, no screens after | — | — |
-| 23:00–07:00 | **Sleep: 8 hours, fixed window** | — | — |
+| 19:30–21:15 | **Build block 2: implementation, debugging, babysittable experiments** | 1.75 | Build |
+| 21:15–22:15 | **Closing hour: lab notebook, Feynman writing, Anki cards, tomorrow's plan** | 1.0 | Review/Write |
+| 22:15–23:00 | Shutdown ritual, no screens after | — | — |
+| 23:30–06:30 | **Sleep: 7 hours, fixed window** | — | — |
 
-**Daily totals: 6.0 build / 3.5 read / 1.5 review-write / 1.0 closing = 12.0 hours.**
+**Daily totals: 6.5 build / 4.0 read / 1.5 review-write = 12.0 hours.**
 
-### Rules that make this survivable
+### The rules that produce output
 
-- **The morning build block is sacred.** No email, no X, no "quick check" before 11:15. Your best 3 hours go to the hardest thing. Every day. This block alone is ~330 hours over the program — it's where you become good.
-- **Never study new material after 21:00.** Evening cognition is for consolidation (writing, cards, planning), not acquisition. Violating this is the #1 way people silently burn out.
-- **Sleep is a hard constraint, not a variable.** 8 hours, same window every night. The moment you trade sleep for study hours, your effective learning rate drops below what 10 well-slept hours would give you. No exception clause. Not even "the training run is almost done."
-- **Exercise is inside the schedule, not after it.** 45 min, 6 days/week, at the 16:15 slot precisely because that's the circadian trough — you'd be useless at a desk then anyway.
-- **Caffeine cutoff 14:00**, given the 23:00 sleep anchor.
-- **Phone lives in another room during all deep-work blocks.** Use a site blocker scheduled automatically for 08:15–13:15.
-- **Plan tomorrow tonight.** Last 10 minutes of the closing hour: write ONE build objective and ONE study objective for tomorrow. Never open the laptop at 08:15 wondering what to do.
+- **The morning build block is sacred.** Nothing touches 07:45–10:45. No email, no X, no "quick check." Your best three hours go to the hardest thing, every day — ~350 hours over the program. This block is where you become good.
+- **Sleep: 7 hours, 23:30–06:30, fixed.** Here is the deal, stated once, as physics rather than parenting: memory consolidation — the process that converts today's 12 hours into permanent skill — happens *during sleep*. The fixed window is non-negotiable because *variable* sleep destroys consolidation even at the same average duration. The 7-vs-8 question we settle with data, not doctrine: if the telemetry (§5) shows Anki retention sliding below 85% or morning-block start latency climbing for two consecutive weeks, you run one week at 7.5–8 and compare throughput. If the numbers say 7 works for you, 7 stands. You are the experiment; instrument it.
+- **Never acquire new material after the closing hour begins.** Late-evening cognition is for consolidation (writing, cards, planning). Violating this trades tomorrow's best hours for tonight's worst.
+- **Training stays.** 45 min/day at the circadian trough — you'd be useless at a desk at 16:00 anyway, and the physical base is what carries a 7-day cognitive load. No athlete skips the weight room to watch more film.
+- **Caffeine cutoff 14:00**, given the 23:30 anchor.
+- **Phone in another room during every deep-work block.** Site blocker auto-scheduled 07:45–13:00.
+- **Plan tomorrow tonight.** Last 10 minutes: ONE build objective, ONE study objective. Never open the laptop wondering what to do.
 
 ### Long-running training jobs
 
-Kick off training runs at the *end* of a block (11:15, 13:15, 18:45), never the start — babysitting a progress bar is not deep work. Check runs only at block boundaries. Use W&B alerts instead of watching dashboards. **Shut rented GPU boxes down before you sit down to debug** — idle A100s are how a $100 budget becomes $300.
+Kick off runs at block *ends* (10:45, 13:00, 18:45), never starts — babysitting a progress bar is not deep work. Check at block boundaries only; W&B alerts, not dashboards. **Shut rented GPU boxes down before you sit down to debug.**
 
 ---
 
-## 2. Weekly Cadence
+## 2. Weekly Cadence — 7 Days, Periodized
 
-- **Mon–Fri:** the full 12-hour template. ~60 hours.
-- **Saturday:** template, but the afternoon STUDY block becomes a **catch-up/buffer block** — finish the week's unfinished build work, clear the paper backlog, or (from Week 12) do interview prep. ~12 hours.
-- **Sunday:** half day, ~6 hours, morning only. Weekly total: **~78 scheduled → budget 72 real.** The buffer absorbs slippage so it never cascades into next week.
+- **Mon–Sat:** the full 12-hour template. 72 hours.
+- **Sunday: the deload day, ~9 hours.** Not a day off — a different *kind* of day. Athletes don't skip Sunday; they train light and study film. Morning: the review/publish/plan protocol below (6 hrs). Afternoon: a 3-hour **light-intensity input block** — lecture backlog at 1.5×, paper triage, Anki debt, code cleanup, reading ahead. **No hard building on Sunday afternoon** — hard problems started at hour 78 of the week produce garbage code you'll rewrite Monday anyway; that's not softness, it's defect-rate management. **Hard stop at ~17:30.** The evening is the week's single deload window — the periodization that makes Monday's 07:45 block sharp for 17 consecutive weeks.
 
-### The Sunday protocol (6 hours, morning only)
+### The Sunday protocol (morning, 6 hrs)
 
 | Time | Activity |
 |---|---|
-| 08:00–08:30 | Anki only (reviews never skip, even on rest days) |
-| 08:30–10:00 | **Weekly review:** re-read all 6 lab-notebook entries. Write a half-page week summary: built, learned, confused-by, would-redo. |
-| 10:00–11:30 | **Publish:** finish and ship the weekly blog post (§7). |
-| 11:30–13:00 | **Plan next week:** the build milestone, the 3–5 papers, the course targets — written as concrete deliverables ("attention forward matches PyTorch to 1e-5", not "understand attention"). |
-| 13:00–14:00 | **Metrics check:** hours by category, Anki retention, burnout checklist (§5), budget spent. |
-
-**Sunday afternoon and evening: completely off.** Leave the house. See humans. This is the mechanism that makes Monday's deep-work block possible for 17 consecutive weeks.
+| 08:00–08:30 | Anki (reviews never skip) |
+| 08:30–10:00 | **Weekly film session:** re-read all 7 lab-notebook entries. Half-page summary: built, learned, confused-by, would-redo. This is studying your own game tape. |
+| 10:00–11:30 | **Publish:** ship the weekly blog post (§7). |
+| 11:30–13:00 | **Plan next week:** build milestone, 3–5 papers, course targets — as concrete deliverables ("attention forward matches PyTorch to 1e-5"), never intentions ("understand attention"). |
+| 13:00–14:00 | **Telemetry check (§5):** hours by category, Anki retention %, readiness checklist, budget spent. |
 
 ### Ship weeks (4, 8, 12, 16)
 
-The last week of each month is a **ship week**, and it resolves the classic conflict between "consolidation" and "crunch" by making shipping *be* the consolidation:
-
-- **Mon–Thu:** the week's remaining new material, front-loaded.
-- **Fri–Sun:** zero new material. Ship the flagship (README, tests, reproducibility), run the **closed-book self-exams** (the timed reps in each month's milestone gate — "GPT from a blank file in <2 hrs" only becomes true through scheduled repetitions, and this is where they live), rewrite your weakest Feynman docs, and absorb the month's overflow.
-- A slipped week burns ship-week buffer, not next month's Week 1. **Week 17 is the program-level reserve** — it is real, planned slack, not a hidden extension.
+The last week of each month: **Mon–Thu** the remaining new material, front-loaded. **Fri–Sun** zero new material — ship the flagship (README, tests, reproducibility), run the **closed-book timed self-exams** (the milestone reps: "GPT from a blank file in <2 hrs" becomes true through scheduled repetitions, and this is where they live), rewrite the weakest Feynman docs, absorb the month's overflow. A slipped week burns ship-week buffer, not next month's Week 1. **Week 17 is the program-level reserve** — planned slack, not a hidden extension.
 
 ---
 
 ## 3. Retention Machinery
 
-Three interlocking systems. Each feeds the next.
+The 12 hours are the input. These three systems are what make them permanent. Skipping them to "save time" is spending 12 hours to keep 6.
 
-### 3a. Anki policy (30 min/day, hard cap)
+### 3a. Anki (30 min/day, hard cap)
 
-- **New cards: max 15/day.** More and reviews compound to 45+ min/day by week 6 and you'll rage-quit the deck. 15/day × ~100 study days ≈ 1,500 cards — plenty.
-- **What earns a card:** definitions you'll reuse (KL divergence, LayerNorm formula), magic numbers (Adam defaults, Chinchilla ratio, attention FLOPs), "why" questions ("why scale by 1/√d_k?"), API gotchas that burned you twice, derivation *steps* (not whole derivations).
-- **What never earns a card:** anything derivable in <30 seconds, paper trivia, code you can look up, anything not yet understood. Anki is for retention, not learning.
-- **Cards are written only in the 21:00 closing hour** — from your notes, with a day-old brain. Cards written in the moment of learning are badly formed.
-- **Prune ruthlessly:** any card failed 4+ times gets rewritten or deleted. It's a bad card, not a bad brain.
+- **≤15 new cards/day.** More and reviews compound past 45 min/day by Week 6. 15/day × ~115 study days ≈ 1,700 cards.
+- **Earns a card:** reusable definitions (KL divergence, LayerNorm), magic numbers (Adam defaults, Chinchilla ratio), "why" questions ("why 1/√d_k?"), API gotchas that burned you twice, derivation *steps*.
+- **Never earns a card:** anything derivable in <30 s, paper trivia, code you can look up, anything not yet understood.
+- Cards written **only in the closing hour**, from notes, with a day-old brain. Any card failed 4+ times gets rewritten or deleted — bad card, not bad brain.
+- **Retention % is a primary telemetry input.** Below 85% for two weeks = the system is overdriven; see §5.
 
-### 3b. Feynman writeups (3×/week, ~45 min each, inside the closing hour)
+### 3b. Feynman writeups (3×/week, ~45 min, inside the closing hour)
 
-Any concept you'll build on for more than a week gets a one-page doc, plain language, **written closed-book**, explaining it to yourself-from-3-months-ago. Backprop, attention, KV cache, PPO — whatever the week's spine concept is.
-
-Protocol: write closed-book → open the source → mark every gap in red → rewrite only the red parts. The red marks are your actual knowledge state. The best of these become blog posts with ~1 hour of polish — that pipeline is deliberate.
+Any concept you'll build on for more than a week gets one page, plain language, **closed-book**, explaining it to yourself-from-3-months-ago. Protocol: write closed-book → open the source → mark every gap in red → rewrite only the red. The red marks are your actual knowledge state. Best ones become blog posts with an hour of polish.
 
 ### 3c. Lab notebook (20 min/day, sacred)
 
-One append-only file per week. Every day, in the closing hour:
-
-1. **What I attempted** (the plan from last night)
-2. **What actually happened** (exact error messages, loss curves, wrong turns)
-3. **What I now believe and why** ("LR 3e-4 diverged at step 2k; 1e-4 stable; suspect warmup too short")
-4. **Open questions** (these seed tomorrow's plan)
-5. **Hours by category** (30 seconds; feeds the Sunday metrics check)
-
-This is the single highest-leverage habit in the system. It converts flailing into experiments, makes debugging cumulative instead of amnesiac, and by Week 8 it's the raw material proving — to you, the internet, and hiring managers — that you did the work. A bad entry ("everything broke, details tomorrow") still counts; a missing entry does not.
+Daily, in the closing hour: (1) what I attempted, (2) what actually happened — exact errors, loss curves, wrong turns, (3) what I now believe and why, (4) open questions, (5) hours by category. This is the film you study Sunday morning. It converts flailing into experiments and debugging from amnesiac to cumulative. A bad entry counts; a missing entry does not.
 
 ---
 
 ## 4. Reading Papers Efficiently, by Stage
 
-The 17:15–18:45 block daily. The failure mode at every stage is reading too many papers too shallowly. Volume targets are *ceilings*.
+The 17:00–18:45 block. The failure mode at every stage is too many papers, too shallow. Volume targets are ceilings.
 
-**Read Keshav's "How to Read a Paper" (2007, 10 pages) on Day 1 of Week 5, before the paper volume ramps.**
+**Read Keshav's "How to Read a Paper" (2007) on Day 1 of Week 5.**
 
-### Stage 1 (Weeks 1–4): architecture literacy — 2–3 papers/week, all classics
+### Stage 1 (Weeks 1–4): 2–3 classics/week
+Pass 1 (15 min): abstract, figures, conclusion → 3 sentences. Pass 2 (60–90 min): full read, key equations reproduced by hand. Pass 3 (spine paper only): implement the core idea. Nothing from the last 12 months yet — you lack the filter.
 
-- **Pass 1 (15 min):** title, abstract, figures, conclusion → 3 sentences: what problem, what trick, what result.
-- **Pass 2 (60–90 min):** full read, skip proofs, reproduce key equations by hand.
-- **Pass 3 (only the week's spine paper):** implement the core idea. One paper implemented > five read.
-- Do not read anything published in the last 12 months yet. You lack the filter.
+### Stage 2 (Weeks 5–10): 3–4/week, one adversarially
+Write the paper's weakness down *before* reading its limitations section, then compare. One paper/week: read abstract + method, stop, spend 20 minutes predicting the experiments, then check — this trains research taste faster than anything else. Read for your project: need-driven reading has ~5× retention. Start the 10-min/day arXiv-radar skim.
 
-### Stage 2 (Weeks 5–10): depth — 3–4 papers/week, one adversarially
+### Stage 3 (Weeks 11–17): 5–8/week, most in 15 minutes
+Triage is the skill. ~1–2/week earn Pass 2; ~1 per two weeks earns implementation. Read in **lineages** (RLHF → DPO → GRPO → current), 5–6 of one thread in one week. For every deep read: *what would I do next if this were mine?* — then check the actual follow-up literature. Owe-a-real-read list capped at 10.
 
-- Pass 2 now includes: **write down the paper's weakness before reading its limitations section**, then compare.
-- One paper/week gets the **adversarial treatment**: read abstract + method, stop, spend 20 minutes predicting the experiments and results, then check. This trains research taste faster than anything else.
-- Read *for your project*: when a build hits a wall, the paper queue reorders around the wall. Need-driven reading has ~5× retention.
-- Start the 10-min/day arXiv-abstract radar (alphaXiv / HF daily papers) — skimming, not reading.
-
-### Stage 3 (Weeks 11–17): like a researcher — 5–8 papers/week, most in 15 minutes
-
-- **Triage is the skill.** 15-minute pass on everything; ~1–2/week earn Pass 2; ~1 per two weeks earns implementation.
-- Read in **lineages**, not singletons: RLHF → DPO → GRPO → current, 5–6 papers of one thread in one week. Lineage reading is where "understanding the field" comes from.
-- For every deep read: *what would I do next if this were my project?* Then compare against the actual follow-up literature.
-- "Papers I owe a real read" list capped at 10. Over 10, delete from the bottom.
-
-**All stages:** every paper gets an entry in `papers.md` — 3 sentences minimum, even for skips. Zero-note reading is entertainment.
+**All stages:** every paper gets 3+ sentences in `papers.md`, even skips. Zero-note reading is entertainment.
 
 ---
 
-## 5. Burnout: Detection and Recovery
+## 5. Readiness Telemetry
 
-At 72 hrs/week, burnout is the default outcome unless actively managed, and you will not notice it from the inside — so detection is checklist-based, not vibes-based.
+This is not a wellness section. It's the same instrumentation every elite program runs: you cannot feel cognitive decline from the inside — your judgment degrades *first*, which is exactly why the check is a checklist and not a feeling. An athlete who hides an injury from the trainer isn't tough; he's a liability to the mission. The mission here is 17 weeks of compounding output, and overreach without detection is how week 11 quietly produces less than week 3.
 
-### The Sunday checklist (score each 0/1)
+### The Sunday checklist (score 0/1 each)
 
-1. Sleep onset >30 min, or waking unrested before the alarm, 3+ nights
+1. Sleep onset >30 min, or waking unrested, 3+ nights this week
 2. Morning build block took >20 min to actually start, 3+ days
-3. Skipped exercise 3+ times
-4. Anki skipped 2+ days
-5. Lab-notebook entries getting hollow ("worked on stuff")
-6. Irritability at trivial things that you noticed yourself
-7. "I'm behind" thought daily despite meeting the plan
-8. Dreading Monday specifically
+3. Skipped training 3+ times
+4. Anki skipped 2+ days, or retention <85%
+5. Lab-notebook entries hollow ("worked on stuff")
+6. Irritability at trivial things, self-noticed
+7. "I'm behind" daily despite meeting the plan
+8. Dreading the morning block specifically
 9. Reading hours creeping above build hours (avoidance disguised as diligence)
-10. Zero moments of genuine fun in the material all week
+10. Zero moments of genuine interest in the material all week
 
-- **0–2: green.** Continue.
-- **3–4: yellow.** Next week: cut to 10 hrs/day (drop the 19:30 block), one extra full rest evening, fix the flagged item. Do NOT cut exercise or sleep to "catch up" — those are the treatment.
-- **5+: red.** Two full days off, immediately, mid-week if necessary. No study, no guilt. Restart at 8 hrs/day for one week before ramping. Two lost days now prevents three lost weeks later.
+**0–2: green.** Full send.
+**3–4: yellow — forced deload week:** drop the 19:30 block (10.5 hr days), fix the flagged item. Not negotiable, not a moral judgment: yellow means output-per-hour is already falling and the cheapest fix is one lighter week now.
+**5+: red — 2 full days off immediately,** then one week at 8 hrs/day before ramping. Two days now versus three weeks later is not a close call. This is the same logic as pulling a player before the hamstring tears.
 
-### Structural rules (always on)
-
-- Sleep and exercise are load-bearing, never the flex variable.
-- One activity per week that has nothing to do with AI and involves other humans.
-- Finish the day's plan early → **stop early**. Banking rest compounds; banking extra hours doesn't.
-- **Week 9–10 is statistically where motivation craters** in programs like this. Expect the trough, name it when it arrives, let the system carry you on discipline for 7–10 days. Pre-write a note to yourself in Week 2, to be opened in Week 10.
+**Structural, always on:** if you finish the day's plan early, stop early — banked recovery compounds, banked extra hours don't. And know this in advance: **weeks 9–10 are the statistical trough** where motivation craters in every program of this shape. It's expected, it's temporary, the system carries you through on discipline. Pre-write the note to yourself in Week 2; open it in Week 10.
 
 ---
 
 ## 6. Stuck vs. Stalled
 
-Being stuck is where learning happens; being *stalled* is where time dies.
+Stuck is where learning happens; stalled is where time dies.
 
-- **Stuck (push through):** you can name the specific thing you don't understand, you have untried hypotheses, and each day's notebook entry shows a *different* failure than yesterday's.
-- **Stalled (intervene):** same failure 3 days running, can't articulate the next attempt, or you're avoiding the project by "reading around it."
+- **Stuck (push through):** you can name the specific unknown, you have untried hypotheses, each day's notebook shows a *different* failure.
+- **Stalled (intervene):** same failure 3 days running, no articulable next attempt, or "reading around" the project.
 
-### The escalation ladder (in order, no skipping)
+### Escalation ladder (in order, no skipping)
 
-1. **90-minute rule:** stuck 90 min → write the problem as a question you'd post publicly. ~40% of the time this solves it.
-2. **Overnight rule:** still stuck at day's end → write the state precisely, sleep, attack in tomorrow's morning block. Never grind past 21:00 on a stuck thing.
-3. **Shrink rule (day 2):** build the smallest version that isolates the failure — tiny model, tiny data, single batch, CPU. If you can't make the problem small, *that* is the real gap.
-4. **Ask rule (day 3):** post the well-formed question (EleutherAI / GPU MODE Discord, project servers). Ego is not part of this program. Elite engineers ask embarrassing questions fast.
-5. **Decision point (day 5 of a stalled milestone):** the checklist below.
+1. **90-minute rule:** write the problem as a question you'd post publicly. ~40% solve rate.
+2. **Overnight rule:** write the exact state, sleep, attack in tomorrow's morning block. Never grind past the closing hour on a stuck thing — that's ego, and it costs tomorrow's best block.
+3. **Shrink rule (day 2):** smallest version that isolates the failure — tiny model, single batch, CPU. Can't make it small = the real gap is understanding the system.
+4. **Ask rule (day 3):** post the well-formed question (EleutherAI / GPU MODE Discord). Asking fast is what strong engineers do; the question is itself an artifact of understanding.
+5. **Day-5 decision:** checklist below.
 
-### The day-5 checklist
+### Day-5 checklist
 
-**Abandon/descope if 2+ are true:** the blocker is incidental to the learning goal (driver hell, broken dependency); success would prove something already demonstrated; a descoped version teaches 80% of the same thing; you're staying only for sunk cost ("knowing what I know now, would I start this today?").
+**Descope if 2+:** blocker is incidental to the learning goal (driver hell, broken dependency); success would only re-prove something already demonstrated; a smaller version teaches 80%; you're staying on sunk cost. **Push if 2+:** the blocker IS the objective (backprop won't converge because you don't fully get backprop — that's the curriculum); known-solvable with your resources and within a week; the struggle produces dense notebook entries.
 
-**Push through if 2+ are true:** the blocker IS the learning objective (backprop won't converge because you don't fully get backprop — that's the curriculum, don't route around it); it's known-solvable with your resources and you're within a week of the milestone; the struggle is producing dense notebook entries.
-
-**Abandoning is not deleting.** Write a one-page post-mortem, commit the code as-is with the post-mortem as README, publish it if honest (failure writeups outperform success writeups). Then descope to a smaller version of the *same* goal — never a shiny new direction. **Hard cap: never 2+ abandons in a row without a Sunday session fixing how you scope.**
+**Descoping is not deleting:** one-page post-mortem, commit as-is with the post-mortem as README, publish it (failure writeups outperform success writeups), replace with a smaller version of the *same* goal. **Never 2+ abandons in a row without a Sunday session fixing how you scope.**
 
 ---
 
-## 7. Public Accountability: GitHub, Blog, X, Community
+## 7. The Public Record: GitHub, Blog, X, Network
 
-Publishing is inside the hours (~10%), because a public record is half the point: it forces real understanding, builds the network that produces opportunities, and *is* the portfolio.
+Publishing is inside the hours (~9%) because the public record is half the point: it forces real understanding, and it *is* the portfolio. This section is not social — every item here is instrumental.
 
 ### GitHub — daily
-
-- **Push every working day.** "Commit-worthy by 21:00" forces daily concreteness. Ugly WIP commits are fine.
-- One pinned repo per major project (6 by November). Each gets a real README: what it is, what it demonstrates, a result, what's next. Budget 2 hours on the README at project completion — the README is what humans read.
-- **From Week 4: every repo carries the CI template** (GitHub Actions: pytest + ruff, pre-commit hooks). Four green-CI repos beat one.
+Push every working day; "commit-worthy by 21:15" forces daily concreteness. Six pinned repos by November, each with a real README (what it demonstrates, a result, what's next — 2 hrs at project completion). Every repo carries the Week-4 CI template.
 
 ### Blog — weekly
-
-- **One post per Sunday, 17 straight Sundays, zero exceptions.** The streak is the mechanism. **Escape valve for crunch weeks (pre-authorized, not cheating): a Feynman doc posted verbatim is a legal entry.**
-- 3 weeks out of 4, the post is a polished Feynman doc or project writeup (~1.5 hrs). Every 4th Sunday: monthly review with real numbers — hours, shipped, failed, next month.
-- Platform: whatever is zero-friction (GitHub Pages/Quarto or Substack). Never spend more than one evening on blog infrastructure.
-- **Week 1: announce the whole program publicly.** "~1,150 hours in 17 weeks, here's the plan, I'll report weekly." Public pre-commitment with a visible schedule is the strongest accountability device a solo learner has.
+**One post per Sunday, 17 straight, zero exceptions.** The streak is the mechanism. Crunch-week escape valve (pre-authorized): a Feynman doc posted verbatim is a legal entry. Every 4th Sunday: the monthly review with real numbers. Platform: zero-friction (GitHub Pages or Substack); never more than one evening on blog infrastructure. **Week 1: announce the program publicly — "~1,300 hours in 17 weeks, here's the plan, I'll report weekly."** Public pre-commitment with a visible schedule is the strongest accountability device a solo operator has.
 
 ### X — daily exhaust
+One post per working day, ≤10 min, from the lab notebook: today's bug, a loss curve, a one-tweet Feynman. Posting in the closing hour only; consumption capped at the 10-min arXiv radar. Follow ~50 researchers whose work you're studying; reply substantively when you have something real. Seventeen weeks of that is how a network forms.
 
-- One post per working day, ≤10 min, drawn from the lab notebook: today's bug, a loss curve, a one-tweet Feynman explanation. Exhaust from real work, never a separate product.
-- Posting happens in the closing hour only; consumption capped at the 10-min arXiv-radar slot. Follow ~50 researchers whose work you're studying; reply substantively when you have something real. Done for 17 weeks, that is how a network forms.
-
-### Community — active, not just lurking
-
-- **Week 5:** join one live reading group (EleutherAI or a paper-club Discord) and attend weekly.
-- **Week 8 onward:** one cold email or DM per week to an author whose work you reproduced — with your reproduction attached. This is how mentorship actually starts.
-- Post your Week 8 / 12 / 16 flagship writeups into the relevant Discords for technical feedback, not just onto your blog.
+### Network — deliberately instrumental
+Week 5: one live reading group, attended weekly (a free seminar + unblocking channel). Week 8 onward: one cold email/week to an author whose work you reproduced, reproduction attached — this is how doors open. Post the Week 8/12/16 flagship writeups into the relevant Discords for technical feedback. Every contact here has a purpose: faster unblocking, sharper feedback, and the referral graph that turns a portfolio into interviews.
 
 ---
 
-## The One-Page Contract
+## The One-Page Contract — Hard Mode
 
-Print, sign, put above the desk:
+Print, sign, above the desk:
 
-1. 8 hours sleep, fixed window. 45 min exercise, 6 days. Never traded for study hours.
-2. Hardest work first: 08:15–11:15 build block, phone elsewhere, every day.
-3. 50% of hours to building. Reading past 35% is procrastination.
-4. Anki (≤15 new/day), lab notebook, tomorrow's plan — every closing hour.
-5. Sunday afternoon off. Fully. Every week.
-6. Stuck 90 min → write it up. Stalled 5 days → checklist. Never 3 abandons in a row.
-7. Blog ships every Sunday for 17 Sundays. Feynman-doc-verbatim is legal on crunch weeks.
-8. Burnout checklist every Sunday; yellow cuts hours immediately, red means 2 days off immediately.
-9. Ship weeks: nothing new after Thursday. Reps, refactor, publish.
-10. When the Week-10 trough hits: it's expected, it's temporary, the system carries you.
+1. 7 hours sleep, 23:30–06:30, **fixed**. Consistency is the non-negotiable; duration answers to telemetry.
+2. 45 min training, 7 days. The body carries the brain.
+3. Hardest work first: 07:45–10:45, phone elsewhere, every day including Sunday's film session.
+4. 50% of hours to building. Reading past 35% is procrastination.
+5. Anki ≤15 new/day, lab notebook, tomorrow's plan — every closing hour, no exceptions.
+6. Sunday: film, publish, plan, light input. No hard building. Hard stop ~17:30.
+7. Stuck 90 min → write it up. Stalled 5 days → checklist. Never 3 abandons in a row.
+8. Blog ships every Sunday for 17 Sundays.
+9. Telemetry every Sunday. Yellow = forced deload. Red = 2 days out. No hiding injuries from the trainer.
+10. Ship weeks: nothing new after Thursday — reps, refactor, publish. Weeks 9–10 trough: expected, temporary, carried by the system.
 
-The person who runs this system at 85% for 17 weeks beats the person who runs a "perfect" 14-hour plan for 3 weeks and flames out. Sustainability is not the compromise — it's the strategy.
+Intensity wins the day. The system wins the seventeen weeks. You need both.

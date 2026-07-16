@@ -1,6 +1,6 @@
 # Month 1 — Foundations Rebuilt Properly (Weeks 1–4 · Jul 20 – Aug 16)
 
-**Budget:** ~288 real hours (72/week — see the operating system's accounting). Split: ~50% build, ~25% read, ~15% pen-and-paper + review, ~10% publish.
+**Budget:** ~300 real hours (~75/week — see the operating system's hard-mode accounting). Split: ~50% build, ~27% read, ~14% pen-and-paper + review, ~9% publish.
 **Non-negotiable habit:** every formula you read, you implement or derive by hand within 24 hours.
 **Coursera note:** deliberately almost unused this month — video courses are too slow for your capacity, and building beats watching. One fallback exception in Week 1.
 

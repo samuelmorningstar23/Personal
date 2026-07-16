@@ -1,7 +1,7 @@
 # Month 4 — Frontier + Proof of Skill (Weeks 13–17 · Oct 12 – Nov 15)
 
 **Premise:** you can already build and train a GPT, run finetuning/DPO, and ship eval'd LLM systems. This month converts competence into *evidence*. Every week produces a public artifact.
-**Budget:** ~288 real hours across Weeks 13–16, plus **Week 17 — the program's explicit reserve** (overflow, applications, optional stretch). Weekly split: ~38 build / ~20 read / ~14 write+publish+interview-prep.
+**Budget:** ~300 real hours across Weeks 13–16, plus **Week 17 — the program's explicit reserve** (overflow, applications, optional stretch). Weekly split: ~40 build / ~21 read / ~14 write+publish+interview-prep.
 **Job-market motion (already running):** 2 hrs/week interview prep since Week 12; **applications start Week 14** — pipelines take 3–6 weeks and Week 17 is interview week.
 
 **Flagship (announced now, executed Weeks 15–16):** full reproduction of **"Progress Measures for Grokking via Mechanistic Interpretability" (Nanda et al., ICLR 2023)** — train a transformer on modular addition until it groks, then reverse-engineer the Fourier-based algorithm it learned and reproduce the paper's progress measures. The ideal capstone: a real paper reproduction, real interpretability rigor, runs on a single GPU in hours, and almost nobody on the market has done it end-to-end.
@@ -110,7 +110,7 @@ The draft plan's most predictable stall was "REINFORCE + DQN + PPO + Atari in on
 This week is **planned slack, declared up front** — the single largest realism reserve in the program. It is not a hidden extension for new curriculum. Priority order:
 
 1. **Finish anything that slipped.** Every month's cut line dumped its overflow here. Clear it.
-2. **The arc post:** *"What ~1,150 Hours in 17 Weeks Taught Me About How LLMs Actually Work"* — folding in the Week 15 safety synthesis. This is the post that travels.
+2. **The arc post:** *"What ~1,300 Hours in 17 Weeks Taught Me About How LLMs Actually Work"* — folding in the Week 15 safety synthesis. This is the post that travels.
 3. **Applications + interviews at full volume** (pipelines opened Week 14 start converting around now). ML system design reps, behavioral stories from the lab notebook — you have 17 weeks of receipts.
 4. **Only if genuinely clear — the stretch modules, in value order:**
    - **Diffusion sprint (2 days):** UDL Ch. 17–18 + DDPM paper + train DDPM on MNIST (~200 lines). Also your only exposure to variational inference/ELBO — a real math gap worth closing.

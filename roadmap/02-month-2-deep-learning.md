@@ -1,7 +1,7 @@
 # Month 2 — Deep Learning for Real (Weeks 5–8 · Aug 17 – Sep 13)
 
 **Theme:** stop consuming, start engineering. By the end of Week 8 you will have written every line of a working GPT, trained it on real data, and be able to diagnose a sick run from its loss curve.
-**Budget:** ~288 real hours (72/week): ~36 build / ~18 lectures+reading / ~10 papers / ~8 review+publish. The operating-system machinery (Anki, notebook, blog) lives inside those numbers.
+**Budget:** ~300 real hours (~75/week): ~38 build / ~19 lectures+reading / ~10 papers / ~8 review+publish. The operating-system machinery (Anki, notebook, blog) lives inside those numbers.
 **Compute:** budget **$25–50 of rented GPU this month** for the Week 8 ablation suite — free tiers alone won't cover it (math below). Size *every* run to fit a 12-hour Kaggle session with checkpoint/resume; free Colab does not survive overnight.
 **Paper protocol:** Keshav's *How to Read a Paper* on Day 1 of Week 5, then the Stage-2 protocol (operating system §4). Every paper: half-page note — contribution, key figure redrawn, "what would I ablate?", one thing you don't believe.
 **Community:** join one live reading group this week (EleutherAI Discord or a paper club) and attend weekly from now on.
