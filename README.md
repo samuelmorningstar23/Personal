@@ -31,6 +31,7 @@ Six public artifacts by November: `tinystack`, `gpt-from-zero`, `smolchat`, `rl-
 | [`roadmap/04-month-4-frontier.md`](roadmap/04-month-4-frontier.md) | Weeks 13–17 |
 | [`roadmap/05-resource-stack.md`](roadmap/05-resource-stack.md) | Every book/course/paper, tiered: scheduled vs. reference vs. post-program |
 | [`PROGRESS.md`](PROGRESS.md) | The weekly tracker — check boxes, log hours, run the Sunday burnout checklist |
+| [`GLOSSARY.md`](GLOSSARY.md) | Every term and abbreviation in the plan, in plain language — consult whenever anything reads opaque |
 
 ## The ten hard rules
 
