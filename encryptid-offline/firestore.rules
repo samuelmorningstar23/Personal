@@ -1,0 +1,26 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /index/{document}{
+      allow read: if request.auth.uid != null;
+    }
+    match /users/{document}{
+      allow read: if request.auth.uid != null;
+    }
+    match /teams/{document}{
+      allow read: if request.auth.uid != null;
+    }
+    match /levels/{document}{
+      allow read,write: if false;
+    }
+    match /questions/{document} {
+      allow read: if true;
+    }
+    match /logs/{team}{
+      //      allow read,write: if false;
+      allow read: if get(/databases/$(database)/documents/users/$(request.auth.uid)).data.team == (team);
+    }
+
+  }
+}
