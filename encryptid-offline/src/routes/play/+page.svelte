@@ -5,7 +5,7 @@
     import CircleXIcon from "lucide-svelte/icons/circle-x";
     import List from "lucide-svelte/icons/list";
     import Lock from "lucide-svelte/icons/lock";
-    import {Doc} from "sveltefire";
+    import {Doc,api} from "$backend";
     import Coin from "@tabler/icons-svelte/IconCoin.svelte";
     import Affiliate from "@tabler/icons-svelte/IconAffiliate.svelte";
     import {Input} from "@/components/ui/SignupForm";
@@ -27,7 +27,7 @@
 
     const submitAnswer = async () => {
         loading = true;
-        const r = await fetch(`/api/submit`,{
+        const r = await api(`/api/submit`,{
             method: "POST",
             body: JSON.stringify({
                 answer,

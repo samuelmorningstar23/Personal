@@ -44,6 +44,19 @@ You still need internet access: the first `npm run local` downloads the Firestor
 
 If the popup closes but the page stays on "create your account", the emulator's sign-in relay couldn't load Google's helper script in time. Reload the page and sign in again.
 
+## Playable demo on GitHub Pages
+A static build that runs entirely in the browser, published at **https://samuelmorningstar23.github.io/Personal/**.
+
+- There is no server and no Firebase. Signing in is a "type any email" dialog, and users, teams and answers are saved in the browser's `localStorage`. Sign in with a different email in a second tab to play as a teammate; team pages update live across tabs. *Reset demo* at the bottom of the page wipes everything.
+- It uses the same pages, levels (`seed/levels.json`) and rules as the real app: IITM-verified teams score points, and teams have at most 3 members.
+- It is not for running a real hunt. Each visitor's data stays in their own browser, so players never see each other's teams, and anyone can edit their own progress. Answers ship only as SHA-256 hashes, but short answers can still be guessed by brute force.
+
+How it works: `DEMO=true` (set by `scripts/pages.js`) makes `svelte.config.js` build with `adapter-static`, swap `src/lib/backend/real` for `src/lib/backend/demo` (the browser stand-in for the `/api` routes and Firestore), and use the loaders in `src/demo/routes` instead of the server ones. The pages themselves are shared.
+
+- `npm run dev:demo` runs the demo locally.
+- `npm run build:pages` writes the static site to `build/`.
+- `.github/workflows/encryptid-pages.yml` (at the repo root) builds and deploys it on every push to the branch it lists. One-time setup: **Settings → Pages → Build and deployment → Source: GitHub Actions**. If the deploy job then reports that the branch "is not allowed to deploy to github-pages", allow the branch under **Settings → Environments → github-pages → Deployment branches**.
+
 ## Setup (deploying with a real Firebase project)
 ### Firebase
 1. Create a new firebase project and do the following:

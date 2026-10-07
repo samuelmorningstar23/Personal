@@ -3,14 +3,14 @@
     import {sendSuccessToast,sendErrorToast} from "$lib/toast_utils";
 
     export let data;
-    import {Doc} from 'sveltefire';
+    import {Doc,api} from '$backend';
     import {Button} from "@/components/ui/MovingBorder";
     import Hammer from "lucide-svelte/icons/hammer";
     let clicked = false;
     let loading = false;
     async function leaveTeam (){
         loading = true;
-        const r = await fetch('/api/team/leave',{
+        const r = await api('/api/team/leave',{
             method: "POST"
         });
         if(r.ok){

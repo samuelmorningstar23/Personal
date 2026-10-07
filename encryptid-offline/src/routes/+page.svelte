@@ -2,6 +2,7 @@
     import { BackgroundBeams } from '@/components/ui/BackgroundBeams';
     import {Button} from '@/components/ui/MovingBorder'
     import Countdown from 'svelte-countdown/src/index.js'
+    import {base} from '$app/paths';
 </script>
 
 <div
@@ -31,7 +32,7 @@
             <Button
                     borderRadius="0.75rem"
                     className="bg-white-300 text-white border-slate-800 text-sm font-bold"
-                    onClick={()=>window.location.href = "/ready"}
+                    onClick={()=>window.location.href = `${base}/ready`}
             >
                 let's go
             </Button>

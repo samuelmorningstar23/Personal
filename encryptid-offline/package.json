@@ -8,13 +8,16 @@
 		"emulators": "firebase emulators:start --only auth,firestore --project demo-encryptid",
 		"dev:emulator": "vite dev --mode emulator",
 		"seed": "node scripts/seed.js",
+		"dev:demo": "node scripts/pages.js dev",
 		"build": "vite build",
+		"build:pages": "node scripts/pages.js build /Personal",
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^3.0.0",
+		"@sveltejs/adapter-static": "^3.0.10",
 		"@sveltejs/kit": "^2.0.0",
 		"@sveltejs/vite-plugin-svelte": "^3.0.0",
 		"autoprefixer": "^10.4.19",

@@ -9,8 +9,8 @@
     import IconBrandGoogle from '@tabler/icons-svelte/IconBrandGoogle.svelte';
     import {Label,Input} from '@/components/ui/SignupForm';
     import {LampEffect} from "@/components/ui/LampEffect";
-    import { GoogleAuthProvider, signInWithPopup , signOut} from 'firebase/auth';
-    import { auth } from '$lib/firebase';
+    import { api, signIn, signOut } from '$backend';
+    import { base } from '$app/paths';
     let isAuthLoading = false;
     import {goto, invalidateAll} from "$app/navigation";
 
@@ -42,25 +42,18 @@
     $: progVal = accState === AccountState.GOOGLE_SIGN_IN ? 0 : (accState === AccountState.USERNAME_NAME ? 33.3 : (accState === AccountState.TEAM_SELECT ? 66.6 : 100))
     async function signInWithGoogle() {
         isAuthLoading = true;
-        const provider = new GoogleAuthProvider();
-        const credential = await signInWithPopup(auth, provider);
-        const idToken = await credential.user.getIdToken();
-        const res = await fetch("/api/auth", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify({ idToken }),
-
-        });
-
-        await invalidateAll();
-        isAuthLoading = false;
+        try {
+            await signIn();
+            await invalidateAll();
+        } finally {
+            // closing the popup rejects; don't leave the button disabled
+            isAuthLoading = false;
+        }
     }
 
     async function joinTeam(){
         loading = true;
-        const r = await fetch("/api/team/join",{
+        const r = await api("/api/team/join",{
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -106,7 +99,7 @@
 
     async function createTeam(){
         loading = true;
-        const r = await fetch("/api/team/create",{
+        const r = await api("/api/team/create",{
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -145,7 +138,7 @@
 
         }
        else {
-            const r = await fetch("/api/create", {
+            const r = await api("/api/create", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -165,10 +158,7 @@
     }
 
     async function signoutSSR() {
-        const res = await fetch("/api/auth", {
-            method: "DELETE",
-        });
-        await signOut(auth);
+        await signOut();
         await invalidateAll();
     }
 
@@ -295,7 +285,7 @@
         <h2 class="font-sans text-4xl mt-4 mb-4">you're all set</h2>
         <button class="relative z-20 mt-4 btn btn-wide btn-primary" on:click={async ()=>await open("https://calendar.google.com/calendar/render?action=TEMPLATE&dates=20240515T183000Z%2F20240515T184500Z&details=&location=&text=encryptid%20finale%20kickoff")}>add kickoff to calendar</button>
         <button class="relative z-20 mt-4 btn btn-wide btn-accent" on:click={async ()=>await open("https://discord.gg/YaMxYCpf3V")}>join discord</button>
-        <button class="relative z-20 mt-4 btn btn-wide btn-secondary" on:click={async () => await goto('/team')}>view team</button>
+        <button class="relative z-20 mt-4 btn btn-wide btn-secondary" on:click={async () => await goto(`${base}/team`)}>view team</button>
 
     </center>
     {/if}

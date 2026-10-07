@@ -49,6 +49,7 @@ export const POST: RequestHandler = async ({ request ,cookies,locals}) => {
             userIndexData[locals.userID] = null
             await transaction.update(userIndexRef,userIndexData);
         });
+        return json({success: true});
     }
 
 
