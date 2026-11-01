@@ -234,7 +234,89 @@ Found via web search; some are early-stage. Do not copy; use them to see what th
 
 ---
 
-## 8. Caveats
+## 9. Existing dashboards of this kind (surveyed 1 Nov 2026)
+
+### 9.1 NASA's own tools, i.e. the baseline the challenge says is "hard to find, compare and interpret"
+| Tool | What it does | Why it matters to us |
+|---|---|---|
+| [PSI Data Repository](https://psi.nasa.gov/physci/repo/) | Keyword search, research-area filters, per-investigation pages with an experimental-table viewer, file browser and publication list | This *is* the thing to improve on. It has no cross-investigation comparison, no ranking, no interpretation, no habitat context. |
+| [Microgravity Analytics Tool / ATOM](https://science.nasa.gov/physical-sciences-informatics-psi/microgravity-analytics-tool/) by G-SPACE (NASA PSI ROSES grant, beta, login at atom.g-space.com) | Image/video analytics on PSI data: "Delta-to-Gravity" space-vs-Earth comparison, automated video segmentation, side-by-side and time-lapse analysis ([NASA feature](https://science.nasa.gov/biological-physical/making-space-science-data-smarter-inside-the-microgravity-analytics-tool/)) | Closest NASA-funded "AI on PSI" product. It is about pixels, not about summarising or ranking investigations, so it does not cover this challenge. |
+| [OSDR Visualization Portal](https://visualization.osdr.nasa.gov/) | NASA's biology-side dashboards: multi-study visualisation portal, RadLab, Environmental Data App, data APIs | Shows what NASA itself considers a "data dashboard". Nothing equivalent exists for PSI physical sciences. |
+| [Space Station Research Explorer](https://www.nasa.gov/mission/station/research-explorer/) | Per-experiment pages: objectives, operations, publications, related experiments | Good secondary source for descriptions and publication lists. |
+
+Bottom line: there is **no NASA dashboard that summarises, ranks or interprets the combustion investigations**. The gap in the challenge statement is real.
+
+### 9.2 The closest judged precedent: 2025 "Build a Space Biology Knowledge Engine"
+Same shape of challenge (608 NASA bioscience publications, "use AI, knowledge graphs and/or other tools" to build a dashboard; audiences: scientists, managers, mission architects). What NASA rewarded:
+
+| Team / result | What they built | AI approach |
+|---|---|---|
+| **SpaceGenes+**, Berlin: *Best Use of Science* (Global Winner) ([project](https://www.spaceappschallenge.org/2025/find-a-team/spacegenes/?tab=project)) | Dashboard of "synergy genes" from GeneLab OSD-288 | No ML model. A transparent synergy formula in Python/Pandas, no-code dashboard (Bolt, Framer); LLMs used for copy, logic review and prototyping, all disclosed. |
+| **Memora Lab**, Lima: *Global Finalist* ([project](https://www.spaceappschallenge.org/2025/find-a-team/astro-alpaca/?tab=project), [code](https://github.com/orgs/MemoraLab/repositories)) | Paper explorer, analytics dashboard, research map, comparative analysis | Chatbot that answers with **cited sources**, 3D knowledge graph of authors and topics. |
+| **!DS "Space Biology Knowledge Explorer"**, Seoul: *Honorable Mention* ([project](https://www.spaceappschallenge.org/2025/find-a-team/ds/?tab=project)) | Role-based views (Scientist / Program Manager / Mission Architect): Search, **Gap Finder** heatmaps, Knowledge Graph (Cytoscape), **Consensus analysis** (forest plots), Insights | LLM **structured extraction** of organisms, exposures, phenotypes, outcomes **with provenance to the source paper**; 3-tier PDF/XML parsing for 100% coverage. |
+| **NyanGer "BioSearchX"**, Turin: *Honorable Mention* ([project](https://www.spaceappschallenge.org/2025/find-a-team/nyanger/?tab=project)) | Research assistant: Q&A, summaries, auto-generated follow-up questions and charts, knowledge graph of agreement/disagreement | Gemini on Vertex AI with citations. |
+| Community: [Biotessera](https://github.com/vero-code/biotessera), [space-biology-engine](https://github.com/ShreyashTelang/space-biology-engine) (Streamlit), [Bader-Aljaberi](https://github.com/Bader-Aljaberi/NASA-Space-Apps-Hackathon-Project) | Typical open-source entries | RAG chat + knowledge graph over the 608 papers. |
+
+Pattern worth copying: **structured extraction with provenance → role-based views → gap/consensus analysis → cited Q&A**, with every AI output labelled. The winner was the most *scientifically honest* entry, not the flashiest.
+
+### 9.3 Live "Flame in Freefall" prototypes from other 2026 teams (checked 1 Nov; all unofficial)
+| Prototype | Data | "SI" layer | Notes |
+|---|---|---|---|
+| **Sarawak team** (ngu-ming-henn), [live](https://nasa-space-apps-sarawak.streamlit.app/), [repo](https://github.com/ngu-ming-henn/Nasa-Space-Apps-Sarawak) | BASS-II PSI-25 experimental table (129 rows, checksum-verified), FLEX PSI-69 (274 tests), MaCFP PMMA ground burns (54) | scikit-learn Ridge (FLEX burn-rate K), logistic regression (extinction, AUC 0.79), small NN; leakage-audited 5×5 CV | Most complete so far: Evidence Explorer with **material ranking by CO** (PMMA slab 372 ppm vs thin film 45 ppm), crew-safety takeaways each tagged *measured / model / simulated*, 2D physics sandbox, provenance audit, EN/中文. Sleeps on Streamlit Cloud; takes ~1 min to wake. |
+| **FLEX extinction predictor** (shaharia179), [live](https://flame-in-freefall-xxjhcu8eymmkafnbgtgjuq.streamlit.app/), [repo](https://github.com/shaharia179/flame-in-freefall) | 276 FLEX droplet tests from NASA/TP-2015-216046 Table IX | Logistic + ridge models; "survival map" of P(extinction) over O₂ × CO₂; extinction AUC 0.85 | Single-dataset what-if tool. Says it was built with Claude as a coding assistant. |
+| **"Flame in Freefall" prototype** (rahulshingha313-gif), [live](https://nasa-five-rose.vercel.app/), [repo](https://github.com/rahulshingha313-gif/Nasa) | Hand-curated cards for BASS, BASS-II, ACME, FLEX from NTRS reports | Rule-based "Flame AI" over the curated set (explicitly not an LLM) | Has the right *information architecture*: Explore → Compare 2–3 experiments → Fire-safety insight cards with NASA citations → "Data unavailable" labels → Sources page. Thin on data. |
+| **CinderLens** (meherabmehu), [live](https://flame-on-cinderlens.vercel.app), [repo](https://github.com/meherabmehu/Flame_On) | 26 **invented** demo records | None | Nice compare-with-tolerance UX that can abstain, but no NASA data yet. |
+| **FlameAtlas** (benzene09), [repo](https://github.com/benzene09/Nasa-Space-App-Challenge-2k26---Fire-atlas) | Dummy data | Planned: `/risk`, `/rank`, `/gaps`, `/ask` FastAPI endpoints, GP gap-filler, SHAP, "FireGPT" chat | React/three.js, kids mode, games. No live URL. |
+| **Faruk042**, [repo](https://github.com/Faruk042/NASA_Flame_In_Freefall_2026) | 673 NTRS papers, user-supplied PSI CSVs, NASA-STD-6001B | Offline BM25 + MMR extractive summaries; optional Gemini | Desktop (CustomTkinter) + Streamlit; Turkish README; no live demo. |
+| Tarek-Ahmed303 "PyroNova", samuelakosaonyejekwe | | | Repos returned 404 on 1 Nov (renamed or removed). |
+
+What the field looks like: everyone starts from the **BASS-II and FLEX experimental tables**, "AI" is mostly small scikit-learn models or a rule-based chatbot, and **nobody has yet covered the whole PSI combustion catalogue (24 investigations) with LLM-structured extraction, environment-relevance ranking and cited interpretation.** That lane is open, and it is exactly what the statement asks for.
+
+---
+
+## 10. How we deliver the "SI-powered" part
+
+**What "SI" means here.** The official FAQ says "Super Intelligence (SI)" replaces "Artificial Intelligence (AI)" in 2026 Space Apps wording, that SI tools (LLMs, assistants, code and image generators) are allowed, and that **every submission must describe how SI tools were used**. So "SI-powered dashboard" = an AI/LLM-powered dashboard plus a disclosure paragraph. Nothing more exotic.
+
+**Design principle:** numbers come from NASA data and deterministic code; words come from the LLM; every word carries a source. That is what wins *Validity* and *Best Use of Data*.
+
+### Layer 0: Data (no LLM)
+Pull the 24 PSI combustion records via the JSON API (`psi_api.py`), plus each investigation's experimental-table CSV, ReadMe, test matrices and summary-report PDF, plus publication DOIs and NTRS abstracts. Cache everything as JSON in the repo so the demo runs **offline at the venue**.
+
+### Layer 1: Structured extraction (LLM, run once, offline)
+For each investigation (and each experimental-table schema) extract one fixed JSON record: objectives · fire-safety pillar (prevention / detection / suppression) · fuel type and form · hardware (CIR-ACME, CIR-MDCA, MSG duct, Cygnus) · variables varied vs fixed · O₂ range · pressure range · flow range · gravity level · sensors and measurements · habitat-relevance tags (spacecraft, station, lunar base, rover, suit) · key findings as **verbatim quotes with file + page** · stated limitations.
+- Use **structured outputs** (a strict JSON schema) so the UI never parses prose, and keep provenance fields mandatory.
+- Model: `claude-opus-5-5` for the 24 investigation records and their report PDFs (quality matters, volume is small); `claude-haiku-5-5` to tag the few hundred NTRS abstracts.
+- Run it through the **Message Batches API** (half price, finishes within the hour). Rough budget: 24 records × ~75K input tokens ≈ 2M tokens ≈ $8 at Opus 5.5 list price, ~$4 batched. Cheap.
+- Store the extraction JSON in the repo and expose it in the UI ("show the evidence record"). Auditable AI is the whole pitch.
+
+### Layer 2: Ranking (deterministic score, LLM-explained)
+Define 4–5 **scenarios** straight from the statement: Moon base / pressurised rover (≥30% O₂, ≤10.2 psi), ISS-like cabin (21%, 14.7 psi), EVA suit (100% O₂, 4.3 psi), Mars transit, Earth fire safety. Score each investigation per scenario from the extracted fields (O₂ overlap, pressure overlap, gravity level, fuel class, pillar, data richness). The score is a transparent formula shown in the UI; the LLM writes the one-paragraph "why it ranks here", citing the record. This is the "ranks" verb in the challenge title, done in a way a judge can check.
+
+### Layer 3: Interpretation and Q&A (LLM at runtime)
+- **Ask**: retrieval over the extraction records plus report excerpts, answered with the API's **citations** feature so the UI shows the exact cited text, PSI ID and DOI. Hard rule in the prompt: if it is not in the corpus, say so (e.g. "PSI has no partial-gravity combustion data; see LUCI/FM2").
+- **Compare**: pick 2–3 investigations → the LLM produces a similarities/differences table from the structured fields (this is literally a "potential consideration" in the statement).
+- **Explain for audience**: same facts rendered for professor / student / engineer (role views, as the 2025 winners did).
+- Put the static corpus first in the prompt and use **prompt caching** so each question costs cents and answers in a few seconds; the default `fallbacks: "default"` setting keeps a rare safety refusal from breaking the demo.
+
+### Layer 4: Optional predictive hooks
+FLEX extinction / burn-rate regressions and BASS-II CO-by-material rankings already exist in other teams' demos. Include them only if time allows, labelled "experimental, ISS droplet tests only". The LLM never predicts physics.
+
+### Guardrails that map to the judging criteria
+- Source chip on every sentence (Validity, Relevance). "SI-generated" badge on every interpretation (Presentation, honesty).
+- A 20–30 question **eval set** checked against the PSI documents before the demo; show the pass rate on an "About the SI" page.
+- One paragraph of SI-use disclosure drafted on day 1, not at 11 pm on day 2.
+- Everything precomputed is committed; the live LLM is used for Q&A and compare only, with a cached fallback answer set if the venue Wi-Fi dies.
+
+### Suggested stack and 2-day split (code starts 14 Nov 9:00 AM, not before)
+- Backend: Python + FastAPI + Anthropic SDK; frontend: React (or Streamlit if the team is Python-only); data in JSON files.
+- **Day 1 AM**: PSI pull, cache, extraction batch submitted. **Day 1 PM**: UI skeleton (Explore / Rank / Compare / Ask), scenario scoring. **Day 2 AM**: Ask + Compare wired, citations rendering, eval. **Day 2 PM**: polish, 30-second demo video, project page, submit by the Amaravati deadline.
+
+Model IDs and list prices used above (Anthropic API, Nov 2026): `claude-opus-5-5` $4 / $20 per MTok in/out · `claude-sonnet-5-5` $2 / $10 · `claude-haiku-5-5` $0.10 / $0.50 · batches at 50%.
+
+---
+
+## 11. Caveats
 - The Space Apps site refused direct requests from this environment, so its pages were read through a rendering proxy on 1 Nov 2026; counts (teams, events) are as of that date.
 - The challenge's Resources tab is empty until 13 Nov; Section 4 is my reconstruction from the statement plus NASA sources, not the official list.
 - Team page details and the Amaravati venue were not publicly visible; verify both when logged in.
