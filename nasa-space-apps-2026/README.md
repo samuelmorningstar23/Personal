@@ -224,19 +224,9 @@ For this challenge the natural targets are **Best Use of Data** and **Best Use o
 
 ---
 
-## 7. Public repos from other teams on this challenge (for awareness only)
-Found via web search; some are early-stage. Do not copy; use them to see what the crowd is converging on.
-- https://github.com/Faruk042/NASA_Flame_In_Freefall_2026
-- https://github.com/nergisRahimzade/NASA-Space-Apps-Challenges-2026---Flame-in-Freefall
-- https://github.com/samuelakosaonyejekwe/flame-in-freefall
-- https://github.com/ngu-ming-henn/Nasa-Space-Apps-Sarawak (BASS-II 129-test dashboard, Streamlit)
-- https://github.com/Tarek-Ahmed303/flame-in-freefall
+## 7. Existing dashboards of this kind (surveyed 1 Nov 2026)
 
----
-
-## 9. Existing dashboards of this kind (surveyed 1 Nov 2026)
-
-### 9.1 NASA's own tools, i.e. the baseline the challenge says is "hard to find, compare and interpret"
+### 7.1 NASA's own tools, i.e. the baseline the challenge says is "hard to find, compare and interpret"
 | Tool | What it does | Why it matters to us |
 |---|---|---|
 | [PSI Data Repository](https://psi.nasa.gov/physci/repo/) | Keyword search, research-area filters, per-investigation pages with an experimental-table viewer, file browser and publication list | This *is* the thing to improve on. It has no cross-investigation comparison, no ranking, no interpretation, no habitat context. |
@@ -246,7 +236,7 @@ Found via web search; some are early-stage. Do not copy; use them to see what th
 
 Bottom line: there is **no NASA dashboard that summarises, ranks or interprets the combustion investigations**. The gap in the challenge statement is real.
 
-### 9.2 The closest judged precedent: 2025 "Build a Space Biology Knowledge Engine"
+### 7.2 The closest judged precedent: 2025 "Build a Space Biology Knowledge Engine"
 Same shape of challenge (608 NASA bioscience publications, "use AI, knowledge graphs and/or other tools" to build a dashboard; audiences: scientists, managers, mission architects). What NASA rewarded:
 
 | Team / result | What they built | AI approach |
@@ -259,7 +249,7 @@ Same shape of challenge (608 NASA bioscience publications, "use AI, knowledge gr
 
 Pattern worth copying: **structured extraction with provenance → role-based views → gap/consensus analysis → cited Q&A**, with every AI output labelled. The winner was the most *scientifically honest* entry, not the flashiest.
 
-### 9.3 Live "Flame in Freefall" prototypes from other 2026 teams (checked 1 Nov; all unofficial)
+### 7.3 Live "Flame in Freefall" prototypes from other 2026 teams (checked 1 Nov; all unofficial)
 | Prototype | Data | "SI" layer | Notes |
 |---|---|---|---|
 | **Sarawak team** (ngu-ming-henn), [live](https://nasa-space-apps-sarawak.streamlit.app/), [repo](https://github.com/ngu-ming-henn/Nasa-Space-Apps-Sarawak) | BASS-II PSI-25 experimental table (129 rows, checksum-verified), FLEX PSI-69 (274 tests), MaCFP PMMA ground burns (54) | scikit-learn Ridge (FLEX burn-rate K), logistic regression (extinction, AUC 0.79), small NN; leakage-audited 5×5 CV | Most complete so far: Evidence Explorer with **material ranking by CO** (PMMA slab 372 ppm vs thin film 45 ppm), crew-safety takeaways each tagged *measured / model / simulated*, 2D physics sandbox, provenance audit, EN/中文. Sleeps on Streamlit Cloud; takes ~1 min to wake. |
@@ -274,7 +264,7 @@ What the field looks like: everyone starts from the **BASS-II and FLEX experimen
 
 ---
 
-## 10. How we deliver the "SI-powered" part
+## 8. How we deliver the "SI-powered" part
 
 **What "SI" means here.** The official FAQ says "Super Intelligence (SI)" replaces "Artificial Intelligence (AI)" in 2026 Space Apps wording, that SI tools (LLMs, assistants, code and image generators) are allowed, and that **every submission must describe how SI tools were used**. So "SI-powered dashboard" = an AI/LLM-powered dashboard plus a disclosure paragraph. Nothing more exotic.
 
@@ -316,7 +306,7 @@ Model IDs and list prices used above (Anthropic API, Nov 2026): `claude-opus-5-5
 
 ---
 
-## 11. Caveats
+## 9. Caveats
 - The Space Apps site refused direct requests from this environment, so its pages were read through a rendering proxy on 1 Nov 2026; counts (teams, events) are as of that date.
 - The challenge's Resources tab is empty until 13 Nov; Section 4 is my reconstruction from the statement plus NASA sources, not the official list.
 - Team page details and the Amaravati venue were not publicly visible; verify both when logged in.
